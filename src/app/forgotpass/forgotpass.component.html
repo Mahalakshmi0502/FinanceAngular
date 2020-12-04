@@ -1,0 +1,30 @@
+<div class="container" >
+    <div class="jumbotron" >
+        <div class="display-4" >
+            <div ><i class='fa fa-question-circle' ></i>
+          Forgot Password
+        </div>
+        </div>
+        <hr class="my-4">
+        <form>
+            <div class="form-group">
+                <label for="phno" >
+                    Phone Number
+                </label>
+                <input type="text" class="form-control" formControlName="phno" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Get OTP</button>
+            </div>
+            <div class="form-group">
+                <label for="otp">
+                   Enter OTP
+                </label>
+                <input type="text" class="form-control" formControlName="otp" required>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-success" routerLink="/ConfirmPass">Verify OTP</a>
+            </div>
+        </form>
+    </div>
+</div>

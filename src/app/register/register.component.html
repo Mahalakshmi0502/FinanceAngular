@@ -1,0 +1,56 @@
+<div class="container" >
+    <div class="jumbotron" >
+        <div class="display-4" >
+            <div ><i class="fa fa-book"></i>
+          Registration Form
+        </div>
+        </div>
+        <hr class="my-4">
+        <form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+            <div class="form-group">
+                    <label for="FirstName" >FirstName</label>
+                    <input type="text" #FirstName="ngModel" class="form-control"
+                    [(ngModel)]="userService.selectedUser.FirstName" name="FirstName" required style="display: inline;" >
+
+                    <label for="LastName" >LastName</label>
+                    <input type="text" #LastName="ngModel" class="form-control"
+                    [(ngModel)]="userService.selectedUser.LastName" name="LastName" required style="display: inline;" >
+                    
+                    <label for="Username" >UserName</label>
+                    <input type="text" #FirstName="ngModel" class="form-control"
+                    [(ngModel)]="userService.selectedUser.Username" name="UserName" required style="display: inline;" >
+
+                    <label for="Password" >Password</label>
+                    <input type="password" #Password="ngModel" class="form-control"
+                    [(ngModel)]="userService.selectedUser.Password" name="Password" required style="display: inline;" >
+
+                    <label for="AccountNumber" >AccountNo</label>
+                    <input type="text" #AccountNumber="ngModel" class="form-control"
+                    [(ngModel)]="userService.selectedUser.AccountNumber" name="AccountNumber" required style="display: inline;" >
+
+                    <label for="EmailID" >EmailID</label>
+                    <input type="email" #EmailID="ngModel" class="form-control"
+                    [(ngModel)]="userService.selectedUser.EmailID" name="EmailID" required style="display: inline;" >
+
+                    <label for="Address" >Address</label>
+                    <input type="text" #Address="ngModel" class="form-control"
+                    [(ngModel)]="userService.selectedUser.Address" name="Address" required style="display: inline;" >
+
+                    <label for="Phoneno" >PhoneNo</label>
+                    <input type="text" #Phoneno="ngModel" class="form-control"
+                    [(ngModel)]="userService.selectedUser.Phoneno" name="PhoneNo" required style="display: inline;" >
+    
+                    <br><br>
+                        <div class="text-center">
+                            <input type="submit" class="btn btn-success" value="Register">
+                        </div>
+            </div>
+        </form>
+        <div class="success" *ngIf="showSuccessMessage">
+            Saved succesfully
+        </div>
+        <div class="alert" *ngIf="serverErrorMessage">
+            {{serverErrorMessage}}
+        </div>
+    </div>
+</div>
